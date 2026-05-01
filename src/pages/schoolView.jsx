@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Navbar from "../app/navbar";
-import useAllStudents from "../features/students/getAllStudents";
 import { fetchStudents } from "../features/students/studentsSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { updateSchoolStats, setTopStudent } from "../features/students/studentsSlice";

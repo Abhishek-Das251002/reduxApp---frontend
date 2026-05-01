@@ -3,11 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { setFilter } from "../features/students/studentsSlice";
 import { setSortby } from "../features/students/studentsSlice";
 import { useEffect, useState } from "react";
-import useAllStudents from "../features/students/getAllStudents";
 
 const Class = () => {
     const dispatch = useDispatch()
-    // const allStudents = useAllStudents()
     const {students, filter, sortBy} = useSelector((state) => state.student)
 
     function handleFilter(e){

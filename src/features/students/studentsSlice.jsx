@@ -3,27 +3,27 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios"
 
 export const fetchStudents = createAsyncThunk("/students/fetchAllStudents", async () => {
-    const response = await axios.get("http://localhost:3000/students")
+    const response = await axios.get("https://redux-app-backend-sigma.vercel.app/students")
 
     return response.data
 })
 
 export const postStudents = createAsyncThunk("/students/postNewStudent", async (studentData) => {
-    const response = await axios.post("http://localhost:3000/students", studentData)
+    const response = await axios.post("https://redux-app-backend-sigma.vercel.app/students", studentData)
 
     return response.data
 })
 
 
 export const updateStudent = createAsyncThunk("/students/updateStudentData", async ({id, updatedData}) => {
-    const response = await axios.put(`http://localhost:3000/students/${id}`, updatedData)
+    const response = await axios.put(`https://redux-app-backend-sigma.vercel.app/students/${id}`, updatedData)
 
     console.log(response)
     return response.data
 })
 
 export const deleteStudent = createAsyncThunk("/students/deleteStudent", async (id) => {
-    const response = await axios.delete(`http://localhost:3000/students/${id}`)
+    const response = await axios.delete(`https://redux-app-backend-sigma.vercel.app/students/${id}`)
 
     console.log(response)
     return response.data

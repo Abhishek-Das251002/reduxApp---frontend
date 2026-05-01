@@ -53,14 +53,6 @@ const AddStudent = () => {
 
         if(id){
             dispatch(updateStudent({id, updatedData: updateStudentDetails}))
-            // setUpdateDetails({
-            //     name: currentStudent.name,
-            //     age: currentStudent.age,
-            //     grade: currentStudent.grade, 
-            //     gender: currentStudent.gender,
-            //     attendance: currentStudent.attendance ? currentStudent.attendance : "",
-            //     marks: currentStudent.marks ? currentStudent.marks : "",
-            // })
         }else{
             dispatch(postStudents(studentDetails))
             setStudentDetails({
