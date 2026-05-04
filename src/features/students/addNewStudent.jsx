@@ -55,10 +55,14 @@ const AddStudent = () => {
 
         if(id){
             dispatch(updateStudent({id, updatedData: updateStudentDetails}))
-            navigate(`/details/${id}`)
+            .unwrap()
+            .then(() => navigate(`/details/${id}`))
+            .catch((error) => console.error(error));
         }else{
             dispatch(postStudents(studentDetails))
-            navigate("/")
+            .unwrap()
+            .then(() => navigate("/"))
+            .catch((error) => console.error(error));
             setStudentDetails({
                 name: "",
                 age: "",
