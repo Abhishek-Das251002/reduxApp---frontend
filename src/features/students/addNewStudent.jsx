@@ -66,9 +66,7 @@ const AddStudent = () => {
                 grade: "",
                 gender: ""
             })
-            setTimeout(() => {
-                navigate("/")
-            },0)
+            navigate("/")
         } 
     }
 
