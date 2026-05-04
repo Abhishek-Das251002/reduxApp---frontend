@@ -3,7 +3,7 @@ import Navbar from "../../app/navbar";
 import { useDispatch } from "react-redux";
 import { postStudents } from "./studentsSlice";
 import { updateStudent } from "./studentsSlice";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import AllStudents from "./getAllStudents";
 
 const AddStudent = () => {
@@ -30,6 +30,8 @@ const AddStudent = () => {
     
     const dispatch = useDispatch()
 
+    const navigate = useNavigate()
+
     function handleChange(e){
         const {value, name} = e.target;
         if(id){
@@ -53,6 +55,7 @@ const AddStudent = () => {
 
         if(id){
             dispatch(updateStudent({id, updatedData: updateStudentDetails}))
+            navigate("/")
         }else{
             dispatch(postStudents(studentDetails))
             setStudentDetails({
@@ -61,6 +64,7 @@ const AddStudent = () => {
                 grade: "",
                 gender: ""
             })
+            navigate("/")
         } 
     }
 
