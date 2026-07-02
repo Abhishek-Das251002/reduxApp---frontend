@@ -123,7 +123,7 @@ npm run dev
 
 ---
 
-> **Note:** This project uses the backend API provided for the assignment. The backend source code is maintained separately.
+> **Note:** Detailed API request and response payloads are available in the [backend repository](https://github.com/Abhishek-Das251002/reduxApp---backend).
 
 ---
 
